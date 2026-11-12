@@ -1,11 +1,12 @@
  html 
 
-{background-color: #06a;}
-
+{
+        background-color: #06a;
+}
 
 a {color: rgba(230, 230, 255, 0.9); text-decoration: none;}
  
-a:hover {color:#222; text-decoration:none;}
+a:hover {color:#777; text-decoration:none;}
 
 
 @font-face 
@@ -14,111 +15,83 @@ a:hover {color:#222; text-decoration:none;}
     src: url(fonts/calibri.woff);
 }
 
-
 body
-
-{ background-color:#06a;
-
-	width:55vw;
+{ 
+       	width:55vw;
         height:auto;
         margin-left:auto;
         margin-right:auto;
 }
 
-
-
-.photobox 
-{       
-        width:15vw;
-        float:left;
-        height:auto;
-        margin-left:1vw;
-        margin-right:1vw;
-        margin-top:2vw;
-        margin-bottom:1vw;      
-}
-
-.photobox2 
-{       
-        width:15vw;
-        float:left;
-        height:auto;
-        margin-left:3vw;
-        margin-right:3vw;
-        margin-top:2vw;
-        margin-bottom:1vw;
-                   
-}
-
-.tmb
+.ultrasound-row 
 {
-        width:15vw;
-        height:auto;
-        float:left;
-        box-shadow:0.2vw 0.2vw 0.3vw rgba(09,09,09,0.5);
-        border-radius:0.8vw;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center; /* Centres the group cleanly on the page */
+    align-items:flex-start;
+    margin-top:2vw;
 }
 
-.tmb2
+
+.u-card /* Outer Two Cards */
 {
-        width:15vw;
-        height:auto;
-        float:left;   
+    width:15vw; /* Adjust this number to match your preferred thumbnail size */
+    min-width: 75px; /* Keeps images from getting tiny on phones */
+    margin: 0 1vw 1.5vw 1vw;
+    text-decoration: none;
+    display: block;
+}
+
+.u-card img 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.8vw;
+    box-shadow: 0.2vw 0.2vw 0.3vw rgba(9, 9, 9, 0.5);
+}
+
+
+.u-card-centre /* Centre Card (Smaller image, wider side margins, no shadow) */
+{
+    width: 14.5vw;  /* Slightly smaller than the outer two */
+    min-width: 75px;
+    margin: 0 3vw 1.5vw 3vw; /* Matches your wider 3vw side spacing */
+}
+
+.u-card-centre img /* Keeps the centre image shadow-free like your .tmb2 */
+{
+    box-shadow: none;        
+    border-radius: 0;
+}
+
+.u-caption /* Caption directly attached under each image */ 
+{
+    margin:0.6vw 0 0 0;
+    text-align:center;
+    font-family:calibri, arial, sans-serif; 
+    color:rgba(230, 230, 255, 0.9)
+    font-size:calc(0.6rem + 0.5vw);
 }
 
 hr 
 {
         height: 0.1vw;
         width:54vw;
-        background-image:linear-gradient(to right,rgba(0,190,255,0),rgba(0,190,255,0.6),rgba(0,190,255,0));
+        background-image:linear-gradient(to right,rgba(0,190,255,0),rgba(0,190,255,0.7),rgba(0,190,255,0));
         border: none;
 }
 
-
-.textbox 
+.textbox1 
 {
-        width:15vw;
+        width:45vw;
         float:left;
         height:auto;
-        margin-left:1vw;
-        margin-right:1vw;
-        margin-bottom:1vw;
-        font-family:calibri,arial,sans-serif; font-style: italic;
-        text-shadow: 0.1vw 0.1vw 0.2vw rgba(9, 9, 9, 0.5);
-        color:rgba(230, 230, 255, 0.9);
-        font-size:1.4vw;
-        font-weight:400;
-        text-align:center; 
-          
+        margin-top:0.5vw;
+        margin-left:5vw;
+        margin-right:5vw;
+        margin-bottom:0.5vw;       
 }
-
-.textbox2 
-{
-        width:15vw;
-        float:left;
-        height:auto;
-        margin-left:3vw;
-        margin-right:3vw;
-        margin-bottom:1vw;
-        font-family:calibri,arial,sans-serif; font-style: italic;
-        text-shadow: 0.1vw 0.1vw 0.2vw rgba(9, 9, 9, 0.5);
-        color:rgba(230, 230, 255, 0.9);
-        font-size:1.4vw;
-        font-weight:400;
-        text-align:center;    
-}
-
-.textbox3 
-{
-        width:43vw;
-        float:left;
-        height:auto;
-        margin-top:1vw;
-        margin-left:6vw;
-        margin-right:6vw;
-        margin-bottom:1.5vw;       
-}
-
 
 .footer 
 {
@@ -126,21 +99,17 @@ hr
         float:left;
         height:auto;
         margin-bottom:1vw;
-        padding:1vw 0vw 1vw 0vw;
+        padding:0.75vw 0vw 1vw 0vw;
         font-family:calibri,arial,sans-serif; font-style: italic;
         text-shadow: 0.1vw 0.1vw 0.2vw rgba(9, 9, 9, 0.5);
         color:rgba(230, 230, 255, 0.9);
-        font-size:1.3vw;
+        font-size:calc(0.7rem + 0.5vw);
         font-weight:400;
-        text-align:center; 
-        border-radius:1vw;   
+        text-align:center;           
 }
 
-
-
-
-
-p {
+p 
+{
         font-family: calibri, arial, sans-serif; font-style: italic;
         font-size:calc(0.6rem + 0.5vw);
         padding:0vw 2vw 0vw 2vw;
@@ -149,12 +118,12 @@ p {
         text-align:justify;   
 }
 
-
-h1  {
+h1  
+{
         font-family:Calibri,arial, sans-serif;font-style: italic;
-        font-size: 3.5vw;
-        margin-top:1vw;
-        margin-bottom:0vw;
+        font-size:calc(2.2rem + 0.7vw);
+        margin-top:1.5vw;
+        margin-bottom:1.5vw;
         text-shadow: 0.2vw 0.2vw 0.3vw rgba(9, 9, 9, 0.5);
         font-weight: 400;
         color: rgba(230,230,255,0.9);
